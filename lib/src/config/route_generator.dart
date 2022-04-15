@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter/src/views/default_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch(settings.name) {
       case '/':
-        return CupertinoPageRoute(builder: (_) => Container());
+        return CupertinoPageRoute(builder: (_) => const DefaultView());
       default:
         return _errorRoute();
     }
