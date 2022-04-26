@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:my_flutter/src/config/route_generator.dart';
+import 'package:my_flutter/src/configs/route_generator.dart';
 import 'package:my_flutter/src/views/default_view.dart';
 
 class MainApp extends StatelessWidget {

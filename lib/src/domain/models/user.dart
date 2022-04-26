@@ -1,5 +1,5 @@
 class User {
-  User({
+  const User({
     required this.id,
     required this.name,
   });

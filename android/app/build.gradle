@@ -61,15 +61,15 @@ android {
 
     flavorDimensions "app"
     productFlavors {
-        def PRODUCTION_APP_ID = "com.development.myflutter"
+        def PRODUCTION_APP_ID = "com.dev.myflutter"
         def PRODUCTION_VERSION_CODE = 1
         def PRODUCTION_VERSION_NAME = "1.0"
 
-        def STAGING_APP_ID = "com.development.myflutter.staging"
+        def STAGING_APP_ID = "com.dev.myflutter.staging"
         def STAGING_VERSION_CODE = 1
         def STAGING_VERSION_NAME = "1.0"
 
-        def DEVELOP_APP_ID = "com.development.myflutter.development"
+        def DEVELOP_APP_ID = "com.dev.myflutter.development"
         def DEVELOP_VERSION_CODE = 1
         def DEVELOP_VERSION_NAME = "1.0"
 
