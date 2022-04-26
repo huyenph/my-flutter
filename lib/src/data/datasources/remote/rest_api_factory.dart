@@ -57,8 +57,11 @@ class RestApiFactory {
           responseBody: true,
           error: true,
         ));
-      // (_dio!.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
-      //     _createHttpClient() as OnHttpClientCreate?;
+      if (AppConfig.instance!.flavor == Flavor.prod ||
+          AppConfig.instance!.flavor == Flavor.stag) {
+        (_dio!.httpClientAdapter as DefaultHttpClientAdapter)
+            .onHttpClientCreate = _createHttpClient() as OnHttpClientCreate?;
+      }
     }
     return _dio!;
   }
