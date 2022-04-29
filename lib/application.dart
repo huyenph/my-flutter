@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/src/configs/route_generator.dart';
-import 'package:my_flutter/src/views/default_view.dart';
+import 'package:my_flutter/src/modules/auth/screens/home/home_screen.dart';
 
 class Application extends StatelessWidget {
   const Application({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute,
-      home: DefaultView(),
+      home: HomeScreen(),
     );
   }
 }

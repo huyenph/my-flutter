@@ -54,7 +54,9 @@ class AuthenticationBloc
   void _onAuthenticationLogoutRequested(
     AuthenticationLogoutRequested event,
     Emitter<AuthenticationState> emitter,
-  ) {}
+  ) {
+    _authUseCase.logout();
+  }
 
   Future<User?> _getUser() async {
     try {

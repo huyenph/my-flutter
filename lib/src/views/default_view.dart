@@ -9,8 +9,15 @@ class DefaultView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('My Flutter'),
       ),
-      body: const Center(
-        child: Text('Default View'),
+      body: Center(
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/auth-home'),
+              child: const Text('Authentication'),
+            ),
+          ],
+        ),
       ),
     );
   }
