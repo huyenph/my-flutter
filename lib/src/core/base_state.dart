@@ -6,16 +6,13 @@ import 'package:my_flutter/src/data/datasources/remote/token_expired_handler.dar
 
 abstract class BaseState<T extends StatefulWidget> extends State<T>
     implements BaseStateListener, TokenExpiredListener {
-  BuildContext get viewContext;
-
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
   final FocusNode _focusNode = FocusNode();
 
-  bool get isMounted;
-
+  String appBarTitle = '';
   bool _isLoading = false;
 
   @override
@@ -42,20 +39,26 @@ abstract class BaseState<T extends StatefulWidget> extends State<T>
   }
 
   @override
-  void onTokenExpired(TokenType type) {
+  BuildContext get viewContext => throw UnimplementedError();
 
-  }
+  @override
+  void onLoading() {}
 
-  void showLoading() {
+  @override
+  void onDismiss() {}
 
-  }
+  @override
+  void onError(Exception e) {}
 
-  void dismissLoading() {
+  @override
+  void onTokenExpired(TokenType type) {}
 
-  }
+  void showLoading() {}
+
+  void dismissLoading() {}
 
   PreferredSizeWidget buildAppBar() => AppBar(
-        title: const Text("App bar"),
+        title: Text(appBarTitle),
       );
 
   Drawer? buildDrawer() => null;

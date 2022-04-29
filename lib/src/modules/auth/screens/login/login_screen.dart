@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: BlocProvider(
-          create: (_) => injector<LoginBloc>(),
+          create: (_) => LoginBloc(injector()),
           child: const LoginForm(),
         ),
       ),

@@ -10,8 +10,8 @@ void authModule() {
   injector.registerSingleton<AuthUseCase>(
     AuthUseCase(injector()),
   );
-  injector.registerSingleton<AuthenticationBloc>(
-    AuthenticationBloc(injector()),
-  );
-  injector.registerSingleton<LoginBloc>(LoginBloc(injector()));
+  // injector.registerSingleton<AuthenticationBloc>(
+  //   AuthenticationBloc(injector()),
+  // );
+  // injector.registerSingleton<LoginBloc>(LoginBloc(injector()));
 }

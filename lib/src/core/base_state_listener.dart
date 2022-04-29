@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 abstract class BaseStateListener {
+  BuildContext get viewContext;
+
   void onLoading();
 
   void onDismiss();
 
-  void onError(Object e, {VoidCallback onTryAgain});
+  void onError(Exception e);
 }
