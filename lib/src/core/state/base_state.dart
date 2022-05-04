@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:my_flutter/src/core/base_state_listener.dart';
+import 'package:my_flutter/src/core/state/base_state_listener.dart';
 import 'package:my_flutter/src/data/datasources/remote/token_expired_handler.dart';
 
 abstract class BaseState<T extends StatefulWidget> extends State<T>

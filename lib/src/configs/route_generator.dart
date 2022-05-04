@@ -10,9 +10,9 @@ class RouteGenerator {
       case '/':
         return CupertinoPageRoute(builder: (_) => const DefaultView());
       case '/auth-home':
-        return CupertinoPageRoute(builder: (_) => const HomeScreen());
+        return CupertinoPageRoute(builder: (_) => HomeScreen());
       case '/auth-login':
-        return CupertinoPageRoute(builder: (_) => const LoginScreen());
+        return CupertinoPageRoute(builder: (_) => LoginScreen());
       default:
         return _errorRoute();
     }
