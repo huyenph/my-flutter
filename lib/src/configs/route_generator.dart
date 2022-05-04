@@ -6,11 +6,11 @@ import 'package:my_flutter/src/views/default_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    switch(settings.name) {
+    switch (settings.name) {
       case '/':
         return CupertinoPageRoute(builder: (_) => const DefaultView());
       case '/auth-home':
-        return CupertinoPageRoute(builder: (_) => HomeScreen());
+        return CupertinoPageRoute(builder: (_) => const HomeScreen());
       case '/auth-login':
         return CupertinoPageRoute(builder: (_) => LoginScreen());
       default:
@@ -19,13 +19,14 @@ class RouteGenerator {
   }
 
   static Route<dynamic> _errorRoute() {
-    return CupertinoPageRoute(builder: (_) => Scaffold(
-      appBar: AppBar(
-        title: const Text('Error'),
-      ),
-      body: const Center(
-        child: Text('Oops!\nSomething went wrong.'),
-      ),
-    ));
+    return CupertinoPageRoute(
+        builder: (_) => Scaffold(
+              appBar: AppBar(
+                title: const Text('Error'),
+              ),
+              body: const Center(
+                child: Text('Oops!\nSomething went wrong.'),
+              ),
+            ));
   }
 }

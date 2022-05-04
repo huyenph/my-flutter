@@ -59,6 +59,7 @@ abstract class BaseState<T extends StatefulWidget> extends State<T>
 
   PreferredSizeWidget buildAppBar() => AppBar(
         title: Text(appBarTitle),
+        centerTitle: false,
       );
 
   Drawer? buildDrawer() => null;

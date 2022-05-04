@@ -7,7 +7,7 @@ abstract class BaseStateless extends StatelessWidget {
   BaseStateless({Key? key}) : super(key: key);
 
   final FocusNode focusNode = FocusNode();
-  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
@@ -38,7 +38,8 @@ abstract class BaseStateless extends StatelessWidget {
   }
 
   PreferredSizeWidget buildAppBar() => AppBar(
-        title: const Text('AppBar'),
+        title: Text(appBarTitle),
+        centerTitle: false,
       );
 
   Widget buildBody();

@@ -13,8 +13,8 @@ class Application extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return CupertinoApp(
-      localizationsDelegates: const [
+    return const CupertinoApp(
+      localizationsDelegates: [
         DefaultMaterialLocalizations.delegate,
         DefaultWidgetsLocalizations.delegate,
       ],
