@@ -59,4 +59,10 @@ class _HomeScreenState extends BaseState<HomeScreen> {
 
   @override
   String get appBarTitle => 'Home';
+
+  // @override
+  // void dispose() {
+  //   context.read<AuthenticationBloc>().close();
+  //   super.dispose();
+  // }
 }

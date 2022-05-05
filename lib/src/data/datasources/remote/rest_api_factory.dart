@@ -6,7 +6,7 @@ import 'package:dio/src/adapters/io_adapter.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/src/configs/app_config.dart';
 import 'package:my_flutter/src/data/datasources/local/shared_preferences_manager.dart';
-import 'package:my_flutter/src/modules/auth/data/auth_service.dart';
+import 'package:my_flutter/src/modules/auth/data/auth_api_service.dart';
 
 abstract class RestApiFactoryListener {
   void onResponse(Response response);
@@ -97,5 +97,5 @@ class RestApiFactory {
     return options;
   }
 
-  AuthService provideAuthService() => AuthService(_createDioClient());
+  AuthApiService provideAuthService() => AuthApiService(_createDioClient());
 }

@@ -1,7 +1,7 @@
 part of injector_setup;
 
 void authModule() {
-  injector.registerSingleton<AuthService>(
+  injector.registerSingleton<AuthApiService>(
     RestApiFactory(injector(), injector()).provideAuthService(),
   );
   injector.registerSingleton<AuthRepository>(

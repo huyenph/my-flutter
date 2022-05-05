@@ -3,17 +3,18 @@ import 'dart:math';
 
 import 'package:dio/dio.dart';
 import 'package:my_flutter/src/data/datasources/local/shared_preferences_manager.dart';
-import 'package:my_flutter/src/modules/auth/data/auth_service.dart';
+import 'package:my_flutter/src/modules/auth/data/auth_api_service.dart';
 import 'package:my_flutter/src/modules/auth/domain/models/password.dart';
 import 'package:my_flutter/src/modules/auth/domain/models/user.dart';
 import 'package:my_flutter/src/modules/auth/domain/models/username.dart';
 import 'package:my_flutter/src/modules/auth/domain/repositories/auth_repository.dart';
+import 'package:rxdart/subjects.dart';
 
 class AuthRepositoryImpl extends AuthRepository {
-  final AuthService _authService;
+  final AuthApiService _authService;
   final SharedPreferencesManager _prefsManager;
 
-  final _controller = StreamController<AuthenticationStatus>();
+  final _controller = BehaviorSubject<AuthenticationStatus>();
 
   AuthRepositoryImpl(this._authService, this._prefsManager);
 

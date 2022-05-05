@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DefaultView extends StatelessWidget {
-  const DefaultView({Key? key}) : super(key: key);
+class MainScreen extends StatelessWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,10 @@ class DefaultView extends StatelessWidget {
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/auth-home'),
               child: const Text('Authentication'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/job-graphql'),
+              child: const Text('GraphQL Jobs'),
             ),
           ],
         ),
