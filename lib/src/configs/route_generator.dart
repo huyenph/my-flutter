@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter/src/modules/auth/screens/home/home_screen.dart';
 import 'package:my_flutter/src/modules/auth/screens/login/login_screen.dart';
-import 'package:my_flutter/src/modules/graphqljobs/screens/job_screen.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/screens/job_screen.dart';
 import 'package:my_flutter/src/screens/main_screen.dart';
 
 class RouteGenerator {
-  static Route<dynamic> generateRoute(RouteSettings settings) {
+  static Route<Object> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':
         return CupertinoPageRoute(builder: (_) => const MainScreen());
@@ -21,7 +21,7 @@ class RouteGenerator {
     }
   }
 
-  static Route<dynamic> _errorRoute() {
+  static Route<Object> _errorRoute() {
     return CupertinoPageRoute(
         builder: (_) => Scaffold(
               appBar: AppBar(
@@ -31,5 +31,22 @@ class RouteGenerator {
                 child: Text('Oops!\nSomething went wrong.'),
               ),
             ));
+  }
+
+  @optionalTypeArgs
+  static Future<T?> push<T extends Object>(
+    BuildContext context,
+    Route<T> route,
+  ) {
+    return Navigator.of(context).push(route);
+  }
+
+  @optionalTypeArgs
+  static Future<T?> pushNamed<T extends Object>(
+    BuildContext context,
+    String routeName, {
+    Object? arguments,
+  }) {
+    return Navigator.pushNamed<T>(context, routeName, arguments: arguments);
   }
 }

@@ -1,7 +1,7 @@
 import 'package:graphql/client.dart';
-import 'package:my_flutter/src/modules/graphqljobs/data/queries.dart'
+import 'package:my_flutter/src/modules/jobs_graphql/data/queries.dart'
     as queries;
-import 'package:my_flutter/src/modules/graphqljobs/domain/models/job.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/domain/models/job.dart';
 
 class GetJobRequestValue implements Exception {}
 

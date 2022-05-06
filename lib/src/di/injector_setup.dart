@@ -10,10 +10,10 @@ import 'package:my_flutter/src/modules/auth/data/auth_api_service.dart';
 import 'package:my_flutter/src/modules/auth/data/repositories/auth_repository_impl.dart';
 import 'package:my_flutter/src/modules/auth/domain/repositories/auth_repository.dart';
 import 'package:my_flutter/src/modules/auth/domain/usecases/auth_usecase.dart';
-import 'package:my_flutter/src/modules/graphqljobs/data/job_api_service.dart';
-import 'package:my_flutter/src/modules/graphqljobs/data/repositories/job_repository_impl.dart';
-import 'package:my_flutter/src/modules/graphqljobs/domain/repositories/job_repository.dart';
-import 'package:my_flutter/src/modules/graphqljobs/domain/usecases/job_usecase.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/data/job_api_service.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/data/repositories/job_repository_impl.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/domain/repositories/job_repository.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/domain/usecases/job_usecase.dart';
 
 part 'independent_injector.dart';
 
@@ -21,7 +21,7 @@ part 'dependent_injector.dart';
 
 part '../modules/auth/auth_module.dart';
 
-part '../modules/graphqljobs/job_module.dart';
+part '../modules/jobs_graphql/job_module.dart';
 
 final injector = GetIt.instance;
 

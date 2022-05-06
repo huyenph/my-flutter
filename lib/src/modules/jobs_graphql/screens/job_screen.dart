@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_flutter/src/core/state/base_state.dart';
 import 'package:my_flutter/src/di/injector_setup.dart';
-import 'package:my_flutter/src/modules/graphqljobs/blocs/jobs_bloc.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/blocs/jobs_bloc.dart';
 
 class JobScreen extends StatefulWidget {
   const JobScreen({Key? key}) : super(key: key);

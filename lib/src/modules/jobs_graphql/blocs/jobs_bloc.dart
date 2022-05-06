@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:my_flutter/src/modules/graphqljobs/domain/models/job.dart';
-import 'package:my_flutter/src/modules/graphqljobs/domain/usecases/job_usecase.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/domain/models/job.dart';
+import 'package:my_flutter/src/modules/jobs_graphql/domain/usecases/job_usecase.dart';
 
 part 'jobs_event.dart';
 
