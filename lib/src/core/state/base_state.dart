@@ -16,6 +16,36 @@ abstract class BaseState<T extends StatefulWidget> extends State<T>
   bool _isLoading = false;
 
   @override
+  void initState() {
+    super.initState();
+    print('initState');
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print('didChangeDepedencies');
+  }
+
+  @override
+  void didUpdateWidget(covariant T oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print('didUpdate');
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+    print('deActive');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print('dispose');
+  }
+
+  @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {

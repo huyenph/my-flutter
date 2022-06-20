@@ -25,7 +25,7 @@ class AppConfig {
   }
 
   String get rootUrl {
-    switch(_instance!.flavor) {
+    switch (_instance!.flavor) {
       case Flavor.prod:
         return prodApiUrl;
       case Flavor.stag:
